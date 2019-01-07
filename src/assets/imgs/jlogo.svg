@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49.37" height="49" viewBox="0 0 49.37 49">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ededed"/>
+      <stop offset="1" stop-color="#f7f7f7"/>
+    </linearGradient>
+  </defs>
+  <g id="J_Logo" data-name="J Logo" transform="translate(-39.63 -11)">
+    <g id="Rectangle_10" data-name="Rectangle 10" transform="translate(39.63 11)" fill="#646c76" stroke="#cecece" stroke-width="1">
+      <rect width="49.37" height="49" rx="8" stroke="none"/>
+      <rect x="0.5" y="0.5" width="48.37" height="48" rx="7.5" fill="none"/>
+    </g>
+    <g id="J_Icon" data-name="J Icon" transform="translate(-41 -8)">
+      <g id="Group_6" data-name="Group 6" transform="translate(92 28)">
+        <g id="Group_8" data-name="Group 8" transform="translate(0 0)">
+          <path id="Path_13" data-name="Path 13" d="M37.227-238H60.485S58.3-229.832,55-220.172,47.931-205.567,33.639-207.1h0l.791-2.839s12.4,1.1,15.085-4.748a125.535,125.535,0,0,0,6.857-20.57c0-.012-20.542.093-20.57,0Z" transform="translate(-33.61 238)" stroke="#ededed" stroke-width="1" fill="url(#linear-gradient)"/>
+        </g>
+        <path id="Path_14" data-name="Path 14" d="M34.574-238H46.429s-1.326,5.726-3.116,10.971S38.73-220,30.97-220.83h0l.759-2.72s6.009,1.069,7.469-2.108a50.406,50.406,0,0,0,3.3-9.6c0-.007-8.771-.22-8.786-.271Z" transform="translate(-28.78 244.857)" stroke="#ededed" stroke-width="1" fill="url(#linear-gradient)"/>
+      </g>
+      <g id="Group_7" data-name="Group 7" transform="translate(94.191 28)">
+        <path id="Path_13-2" data-name="Path 13" d="M41.426-238H64.684l-.753,2.743H40Z" transform="translate(-40 238)" fill="#ff6767" stroke="#ff6767" stroke-width="1"/>
+        <path id="Path_14-2" data-name="Path 14" d="M39.788-238H51.7l-.761,2.848L38.9-235.257Z" transform="translate(-36.188 244.857)" fill="#ff6767" stroke="#ff6767" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>
