@@ -1,4 +1,6 @@
 @import "styles.less";
+@import "utils.less";
+@import "normalize.less";
 
 // Setup initial conditions
 * {
@@ -8,4 +10,12 @@
 body {
     margin: 0;
     background-color: @background-light;
+}
+
+
+// topnav
+#topnav {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
