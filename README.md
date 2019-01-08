@@ -32,11 +32,13 @@
 <hr/>
 
 ## todo:
-✅ design
-❌ chore: develop
-❌ chore: static hosting in S3
-❌ chore: register domain Route53
-❌ chore: CDN with CloudFront
-❌ chore: CICD with TravisCI
-❌ feat: filter projects by tools
-❌ feat: recent thoughts section (twirter)
+features |
+--------|
+✅ design |
+❌ chore: develop |
+❌ chore: static hosting in S3 |
+❌ chore: register domain Route53 |
+❌ chore: CDN with CloudFront |
+❌ chore: CICD with TravisCI |
+❌ feat: filter projects by tools |
+❌ feat: recent thoughts section (twirter) |
