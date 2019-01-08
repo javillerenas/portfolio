@@ -1,29 +1,42 @@
-# portfolio
+<div align="center">
+  <br>
+  <img
+    alt="DEV"
+    src="/src/assets/imgs/about-project/mockup.png"
+    width=650px
+  />
+  <h1>personal website</h1>
+</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/-adobeXD-ff69b4.svg" alt="adobeXD" />
+  <img src="https://img.shields.io/badge/Vue-2.5.21-brightgreen.svg" alt="Vuejs" />
+  <img src="https://img.shields.io/badge/aws-S3-yellow.svg" alt="aws" />
+  <img src="https://img.shields.io/badge/aws-route53-yellow.svg" alt="aws" />
+  <img src="https://img.shields.io/badge/aws-CloudFront-yellow.svg" alt="aws" />
+  <img src="https://img.shields.io/badge/-TravisCI-lightgrey.svg" alt="aws" />
+  <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="awesome badge"/>
+</p>
+</div>
+<hr/>
 
-## Project setup
-```
-npm install
-```
+## ❓ about:
+<p>personal portfolio to showcase my <i style="color: #FF6767;">design</i>, <i style="color: #007AFE;">web dev</i>, and <i style="color: #30DEB6;">aws</i> skills.
+<hr/>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 🛠 tools:
+<img
+    alt="DEV"
+    src="/src/assets/imgs/about-project/tools.png"
+    width=350px
+/>
+<hr/>
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## todo:
+✅ design
+❌ chore: develop
+❌ chore: static hosting in S3
+❌ chore: register domain Route53
+❌ chore: CDN with CloudFront
+❌ chore: CICD with TravisCI
+❌ feat: filter projects by tools
+❌ feat: recent thoughts section (twirter)
