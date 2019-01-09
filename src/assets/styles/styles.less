@@ -8,31 +8,17 @@
 @light-blue: #9AC5FF;
 @dark-blue: #5B6E88;
 @dark-grey: #646C76;
-@grey: #7B7B7B;
+@grey: #707070;
+@grey-darker: darken(@dark-grey, 20%);
 @background-light: #EDEDED;
+
+@blue-gradient: linear-gradient(180deg, #00bdfe 25%, #007afe 100%);
+@red-gradient: linear-gradient(180deg, #FF6767 25%, #ED6D8B 100%);
+
+@red-shadow: 2px 2px 20px @lava-red;
+@blue-shadow: 2px 2px 20px @cold-blue;
+@dark-shadow: 1px 1px 10px @dark-grey;
 
 @font-ubuntu: 'Ubuntu', 'monospace';
 
 
-.is-primary {
-    background-color: @cold-blue;
-}
-.is-red {
-    background-color: @lava-red;
-}
-.is-orange {
-    background-color: @cool-orange;
-}
-.is-green {
-    background-color: @sweet-green;
-}
-
-.text-light {
-    color: @background-light;
-}
-.text-dark-blue {
-    color: @dark-blue;
-}
-.text-dark {
-    color: darken(@dark-grey, 10%);
-}

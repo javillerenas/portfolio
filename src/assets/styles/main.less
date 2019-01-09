@@ -3,19 +3,174 @@
 @import "normalize.less";
 
 // Setup initial conditions
+html {
+  color: @dark-grey;
+  font-size: 10px; // set up rem
+}
+
+p {
+  font-size: 1.6rem;
+}
 * {
-    font-family: Ubuntu, monospace;
+  font-family: @font-ubuntu;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background-color: @background-light;
+  margin: 0;
+  background-color: @background-light;
+}
+
+// flex utils 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+// title
+.title {
+  font-size: 5rem;
+  color: @dark-grey;
+  border-bottom: 1rem solid @dark-blue;
+  line-height: 0.9;
+}
+.title--blue {
+  border-color: @cold-blue;
+}
+.title--orange {
+  border-color: @cool-orange;
+}
+.title--red {
+  border-color: @lava-red;
+}
+.text--sm {
+  font-size: 1.2rem;
+}
+
+// cards
+.card {
+  border-radius: 5px;
+  border: 1px solid @dark-grey;
+  padding: 2rem;
+  color: @grey-darker;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    .card__title {
+      font-size: 1.8rem;
+      margin: 0.5rem;
+    }
+    .card__description {
+      text-align: center;
+      width: 80%;
+      margin: 0.5rem;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.card--shadow {
+  box-shadow: @dark-shadow;
+}
+
+// color utils
+.is-primary {
+  color: @cold-blue;
+}
+.is-red {
+  color: @lava-red;
+}
+.is-orange {
+  color: @cool-orange;
+}
+.is-green {
+  color: @sweet-green;
+}
+.is-light {
+  color: @background-light;
+}
+.is-dark-blue {
+  color: @dark-blue;
+}
+.is-dark {
+  color: darken(@dark-grey, 10%);
+}
+.is-white {
+  color: white;
+}
+
+// -----
+// backgrounds
+.bg-blue {
+  background-color: @cold-blue;
+}
+.bg-red {
+  background-color: @lava-red;
+}
+.bg-orange {
+  background-color: @cool-orange;
+}
+.bg-green {
+  background-color: @sweet-green;
+}
+.bg-dark-blue {
+  background-color: @dark-blue;
+}
+.bg-dark-grey {
+  background-color: @dark-grey;
+}
+.bg-white {
+  background-color: white;
+}
+
+// -----
+// buttons
+.btn {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  border: none;
+  border-radius: 4px;
+}
+.btn--wide {
+  width: 180px;
+  height: 50px;
+}
+.btn--red {
+  color: white;
+  background-color: @lava-red;
+  background-image: @red-gradient;
+  box-shadow: @red-shadow;
+}
+.btn--blue {
+  color: white;
+  background-color: @blue-secondary;
+  background-image: @blue-gradient;
+  box-shadow: @blue-shadow;
+}
+
+// ---
+.pill {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
 }
 
 
-// topnav
-#topnav {
-  @media screen and (max-width: 768px) {
+
+// hide
+.hide-xs {
+  @media (max-width: 400px) {
     display: none;
   }
 }
