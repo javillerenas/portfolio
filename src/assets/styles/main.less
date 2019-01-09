@@ -4,6 +4,7 @@
 
 // Setup initial conditions
 html {
+  color: @dark-grey;
   font-size: 10px; // set up rem
 }
 
@@ -12,6 +13,7 @@ p {
 }
 * {
   font-family: @font-ubuntu;
+  box-sizing: border-box;
 }
 
 body {
@@ -24,6 +26,55 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+// title
+.title {
+  font-size: 5rem;
+  color: @dark-grey;
+  border-bottom: 1rem solid @dark-blue;
+  line-height: 0.9;
+}
+.title--blue {
+  border-color: @cold-blue;
+}
+.title--orange {
+  border-color: @cool-orange;
+}
+.title--red {
+  border-color: @lava-red;
+}
+.text--sm {
+  font-size: 1.2rem;
+}
+
+// cards
+.card {
+  border-radius: 5px;
+  border: 1px solid @dark-grey;
+  padding: 2rem;
+  color: @grey-darker;
+
+  &__header {
+    margin-bottom: 2rem;
+    .card__title {
+      font-size: 1.8rem;
+      margin: 0.5rem;
+    }
+    .card__description {
+      text-align: center;
+      width: 80%;
+      margin: 0.5rem;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 // color utils
@@ -69,6 +120,9 @@ body {
 .bg-dark-grey {
   background-color: @dark-grey;
 }
+.bg-white {
+  background-color: white;
+}
 
 // -----
 // buttons
@@ -80,13 +134,13 @@ body {
   border: none;
   border-radius: 4px;
 }
-.btn-red {
+.btn--red {
   color: white;
   background-color: @lava-red;
   background-image: @red-gradient;
   box-shadow: @red-shadow;
 }
-.btn-blue {
+.btn--blue {
   color: white;
   background-color: @blue-secondary;
   background-image: @blue-gradient;
