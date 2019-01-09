@@ -76,6 +76,9 @@ body {
     flex-wrap: wrap;
   }
 }
+.card--shadow {
+  box-shadow: @dark-shadow;
+}
 
 // color utils
 .is-primary {
@@ -98,6 +101,9 @@ body {
 }
 .is-dark {
   color: darken(@dark-grey, 10%);
+}
+.is-white {
+  color: white;
 }
 
 // -----
@@ -127,12 +133,14 @@ body {
 // -----
 // buttons
 .btn {
-  width: 180px;
-  height: 50px;
   font-size: 2rem;
   letter-spacing: 0.2rem;
   border: none;
   border-radius: 4px;
+}
+.btn--wide {
+  width: 180px;
+  height: 50px;
 }
 .btn--red {
   color: white;
@@ -145,4 +153,10 @@ body {
   background-color: @blue-secondary;
   background-image: @blue-gradient;
   box-shadow: @blue-shadow;
+}
+
+// ---
+.pill {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
 }
