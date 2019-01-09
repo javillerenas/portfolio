@@ -40,8 +40,8 @@
             </p>
           </div>
           <div class="home__buttons">
-            <button class="btn btn--red">Contact me!</button>
-            <button class="btn btn--blue">Resume</button>
+            <button class="btn btn--red btn--wide">Contact me!</button>
+            <button class="btn btn--blue btn--wide">Resume</button>
           </div>
         </div>
       </section>
@@ -284,7 +284,79 @@
       </section>
 
       <!-- projects -->
-      <section class="projects hero"></section>
+      <section id="projects" class="projects hero">
+        <div class="section-container">
+          <h1 class="title title--orange">Projects</h1>
+          <div class="section__background bg--skewed bg-orange flex flex-center">
+            <div class="project__cards">
+              <!-- frontend -->
+              <div class="project bg--content">
+                <div class="card card--shadow bg-white flex-center flex-column">
+                  <div class="card__header flex-center flex-column">
+                    <figure class="card__icon">
+                      <img src="@/assets/imgs/projects/portfolio.png" alt>
+                    </figure>
+                    <h3 class="card__title">Personal Portfolio</h3>
+                    <p class="card__description">My personal webapge to showcase my skills</p>
+                  </div>
+                  <div class="card__body">
+                    <div class="project__pills">
+                      <p class="pill bg-green is-white">vue</p>
+                      <p class="pill bg-red is-white">adobeXD</p>
+                      <p class="pill bg-orange">aws lambda</p>
+                    </div>
+                    <button class="btn btn--blue">
+                      <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="project bg--content">
+                <div class="card card--shadow bg-white flex-center flex-column">
+                  <div class="card__header flex-center flex-column">
+                    <figure class="card__icon">
+                      <img src="@/assets/imgs/projects/upvote.png" alt>
+                    </figure>
+                    <h3 class="card__title">UpVote!</h3>
+                    <p class="card__description">My personal webapge to showcase my skills</p>
+                  </div>
+                  <div class="card__body">
+                    <div class="project__pills">
+                      <p class="pill bg-green is-white">vue</p>
+                      <p class="pill bg-green is-white">bulma</p>
+                    </div>
+                    <button class="btn btn--blue">
+                      <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="project bg--content">
+                <div class="card card--shadow bg-white flex-center flex-column">
+                  <div class="card__header flex-center flex-column">
+                    <figure class="card__icon">
+                      <img src="@/assets/imgs/projects/carpricepredictor.png" alt>
+                    </figure>
+                    <h3 class="card__title">Car Price Predictor</h3>
+                    <p class="card__description">My personal webapge to showcase my skills</p>
+                  </div>
+                  <div class="card__body">
+                    <div class="project__pills">
+                      <p class="pill bg-green is-white">vue</p>
+                      <p class="pill bg-red is-white">adobeXD</p>
+                      <p class="pill bg-orange">aws lambda</p>
+                    </div>
+                    <button class="btn btn--blue">
+                      <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- -->
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- contact -->
       <section class="contact"></section>
@@ -405,7 +477,7 @@ export default class App extends Vue {}
 }
 
 // ---
-.skills {
+#skills {
   border: 1px solid orange;
 
   h1 {
@@ -467,6 +539,86 @@ export default class App extends Vue {}
           p {
             margin: 0;
           }
+        }
+      }
+    }
+  }
+}
+
+// ---
+#projects {
+  margin-top: 10rem;
+  border: 1px solid orange;
+
+  h1 {
+    margin: 2.5rem;
+  }
+
+  .section__background {
+    position: relative;
+
+    &::before {
+      z-index: -1;
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 102%;
+      top: 0;
+      left: 0;
+      background-color: @cool-orange;
+      transform-origin: top right;
+      transform: skewY(3deg);
+    }
+  }
+
+  .project__cards {
+    margin: 4rem 0 0;
+    width: 80%;
+
+    .project {
+      .card__header {
+        margin-bottom: 1rem;
+      }
+      figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        img {
+          max-width: 70%;
+          max-height: 300px;
+        }
+      }
+    }
+    > div {
+      margin-bottom: 2rem;
+
+      .card__title {
+        color: black;
+      }
+
+      .card__body {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        .project__pills {
+          flex: 3;
+        }
+
+        p {
+          display: inline-block;
+          margin: 0.3rem;
+        }
+
+        button {
+          > * {
+            font-size: 3rem;
+          }
+          width: 6rem;
+          height: 6rem;
+          padding: 0;
         }
       }
     }
