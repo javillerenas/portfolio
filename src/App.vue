@@ -381,7 +381,38 @@
       </section>
 
       <!-- footer -->
-      <footer class="footer"></footer>
+      <footer id="footer" class="footer">
+        <div class="footer__main">
+          <div class="footer__container flex-center">
+            <div class="footer__logo flex-center flex-column">
+              <figure>
+                <img src="@/assets/imgs/jlogo.svg" alt="javier llerenas">
+              </figure>
+              <h3>Javier</h3>
+            </div>
+            <div class="footer__nav">
+              <nav class="flex-center flex-column">
+                <a href="#">home</a>
+                <a href="#">skills</a>
+                <a href="#">projects</a>
+              </nav>
+            </div>
+            <div class="footer__follow">
+              <p>Follow me on:</p>
+              <div class="footer__brand-nav">
+                <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
+                <font-awesome-icon :icon="['fab', 'linkedin']"></font-awesome-icon>
+                <font-awesome-icon :icon="['fab', 'twitter']"></font-awesome-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>built with <span class="is-red">❤</span> and ☕ | open-sourced on</p>
+          <font-awesome-icon class="footer-icon" :icon="['fab', 'github']"></font-awesome-icon>
+        </div>
+      </footer>
+      <!-- end main -->
     </main>
   </div>
 </template>
@@ -669,10 +700,53 @@ export default class App extends Vue {}
 
 #footer {
   .footer__main {
+    padding: 2.5rem;
+    color: white;
     background-color: @blue-secondary;
     background-image: @blue-gradient;
+
+    .footer__container {
+      display: flex;
+      justify-content: space-around;
+
+      .footer__logo {
+        h3 {
+          font-size: 1.4rem;
+          margin-top: 0.1rem;
+        }
+      }
+
+      .footer__nav {
+        nav > a {
+          color: white;
+          font-size: 1.5rem;
+          line-height: 2;
+          text-decoration: none;
+        }
+      }
+
+      .footer__follow {
+        p {
+          margin: 0 0 1rem;
+        }
+        .footer__brand-nav {
+          display: flex;
+          justify-content: space-around;
+          font-size: 2.5rem;
+        }
+      }
+    }
   }
   .footer__bottom {
+    text-align: center;
+
+    p {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+    .footer-icon {
+      font-size: 2rem;
+    }
   }
 }
 </style>
