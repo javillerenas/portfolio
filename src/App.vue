@@ -528,8 +528,6 @@ export default class App extends Vue {}
 
 // ---
 #skills {
-  border: 1px solid orange;
-
   h1 {
     margin: 2.5rem;
   }
@@ -599,7 +597,6 @@ export default class App extends Vue {}
 // ---
 #projects {
   margin-top: 10rem;
-  border: 1px solid orange;
 
   h1 {
     margin: 2.5rem;
@@ -680,9 +677,10 @@ export default class App extends Vue {}
 #contact {
   .container {
     width: 80%;
-    height: 50vh;
+    height: 45vh;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: -1.5rem;
 
     .card__title {
       border-bottom: 0.5rem @blue-secondary solid;
