@@ -359,7 +359,26 @@
       </section>
 
       <!-- contact -->
-      <section class="contact"></section>
+      <section id="contact" class="contact">
+        <section class="container flex flex-center">
+          <div class="card bg-white card--shadow">
+            <div class="card__header">
+              <h1 class="card__title">Let's Work Together! 👍</h1>
+              <p class="card__description">
+                I am a very passionate 🔥, energetic ⚡, and
+                friendly 😄 person.
+                <span
+                  class="hide-xs"
+                >
+                  My strengths are in full-stack web
+                  development but also enjoy design projects.
+                </span>
+              </p>
+              <button class="btn btn--red btn--wide">Contact Me</button>
+            </div>
+          </div>
+        </section>
+      </section>
 
       <!-- footer -->
       <footer class="footer"></footer>
@@ -486,6 +505,7 @@ export default class App extends Vue {}
 
   .section__background {
     position: relative;
+    width: 100%;
 
     &::before {
       z-index: -1;
@@ -555,6 +575,7 @@ export default class App extends Vue {}
   }
 
   .section__background {
+    width: 100%;
     position: relative;
 
     &::before {
@@ -622,6 +643,36 @@ export default class App extends Vue {}
         }
       }
     }
+  }
+}
+
+#contact {
+  .container {
+    width: 80%;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    .card__title {
+      border-bottom: 0.5rem @blue-secondary solid;
+    }
+
+    .card__description {
+      line-height: 1.3;
+    }
+
+    button.btn {
+      margin-top: 2rem;
+    }
+  }
+}
+
+#footer {
+  .footer__main {
+    background-color: @blue-secondary;
+    background-image: @blue-gradient;
+  }
+  .footer__bottom {
   }
 }
 </style>

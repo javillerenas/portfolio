@@ -59,7 +59,12 @@ body {
   color: @grey-darker;
 
   &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 2rem;
+
     .card__title {
       font-size: 1.8rem;
       margin: 0.5rem;
@@ -159,4 +164,13 @@ body {
 .pill {
   padding: 0.5rem 1rem;
   border-radius: 20px;
+}
+
+
+
+// hide
+.hide-xs {
+  @media (max-width: 400px) {
+    display: none;
+  }
 }
