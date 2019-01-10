@@ -35,7 +35,7 @@
 features |
 --------|
 ✅ design |
-❌ chore: develop |
+✅ chore: develop |
 ❌ chore: static hosting in S3 |
 ❌ chore: register domain Route53 |
 ❌ chore: CDN with CloudFront |
