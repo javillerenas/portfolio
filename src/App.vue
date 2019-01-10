@@ -24,16 +24,16 @@
           </figure>
           <div class="home__text">
             <p>
-              I am an energetic
-              <span class="is-orange">Computer Scientist</span>
+              I am an energetic ⚡
+              <span class="is-orange">Computer Scientist</span><br>
               who loves
-              <span class="is-red">good design</span>
+              <span class="is-red">good design</span> 🎨 <br>
               and creating
               <span class="is-primary">beautiful web apps</span>.
             </p>
             <p>
               Located in Las Vegas, NV.
-              I specialize in
+              <br>I specialize in
               <span
                 class="is-green"
               >Serverless Front End + Design</span>.
@@ -471,7 +471,6 @@ export default class App extends Vue {}
 #home {
   margin-top: @topnav-height;
   height: calc(100vh - @topnav-height);
-  // border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -479,13 +478,14 @@ export default class App extends Vue {}
   .home__wrapper {
     display: flex;
     flex-direction: column;
+    padding: 0 1rem;
 
     .home__figure {
-      height: 25rem;
       text-align: center;
 
       .home__profile {
-        max-width: calc(20rem + 10vw);
+        width: calc(20rem + 10vw);
+        max-width: 30rem;
         border-radius: 50%;
         box-shadow: @dark-shadow;
       }
@@ -499,7 +499,6 @@ export default class App extends Vue {}
 
     .home__text {
       text-align: center;
-      margin-top: 1rem;
     }
 
     .home__buttons {
