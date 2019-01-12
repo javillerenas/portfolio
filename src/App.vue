@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-
     <!-- nav -->
     <section id="topnav">
       <div class="topnav__wrapper">
@@ -48,8 +47,8 @@
       <!-- skills -->
       <section id="skills" class="skills hero">
         <div class="section-container">
-          <h1 class="title title--blue">Skills</h1>
-          <div class="section__background bg--skewed bg-blue flex flex-center">
+          <div class="section__background bg--skewed bg-blue flex flex-center flex-column">
+            <h1 class="title title--white">Skills</h1>
             <div class="skills__cards">
               <!-- frontend -->
               <div class="skills__frontend bg--content">
@@ -285,8 +284,8 @@
       <!-- projects -->
       <section id="projects" class="projects hero">
         <div class="section-container">
-          <h1 class="title title--orange">Projects</h1>
-          <div class="section__background bg--skewed bg-orange flex flex-center">
+          <div class="section__background bg--skewed bg-orange flex flex-center flex-column">
+            <h1 class="title title--white">Projects</h1>
             <div class="project__cards">
               <!-- frontend -->
               <div class="project bg--content">
@@ -407,7 +406,8 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <p>built with
+          <p>
+            built with
             <span class="is-red">❤</span> and ☕ | open-sourced on
           </p>
           <font-awesome-icon class="footer-icon" :icon="['fab', 'github']"></font-awesome-icon>
@@ -493,7 +493,7 @@ export default class App extends Vue {}
         box-shadow: @dark-shadow;
         margin-bottom: 1vh;
 
-        @media (min-width: 800px ) {
+        @media (min-width: 800px) {
           max-width: 25rem;
         }
       }
@@ -569,10 +569,10 @@ export default class App extends Vue {}
 
 // ---
 #skills {
-  h1 {
+  .title {
     margin: 2.5rem;
+    text-shadow: 5px 5px 30px @blue-secondary;
   }
-
   .section__background {
     position: relative;
     width: 100%;
@@ -592,7 +592,7 @@ export default class App extends Vue {}
   }
 
   .skills__cards {
-    margin: 4rem 0 0;
+    margin: 2rem 0 0;
     width: 80%;
 
     > div {
@@ -639,8 +639,9 @@ export default class App extends Vue {}
 #projects {
   margin-top: 10rem;
 
-  h1 {
+  .title {
     margin: 2.5rem;
+    text-shadow: 5px 5px 30px darken(@cool-orange, 20%);
   }
 
   .section__background {
@@ -662,7 +663,7 @@ export default class App extends Vue {}
   }
 
   .project__cards {
-    margin: 4rem 0 0;
+    margin: 2rem 0 0;
     width: 80%;
 
     .project {
@@ -719,9 +720,7 @@ export default class App extends Vue {}
   .container {
     width: 80%;
     height: 45vh;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -1.5rem;
+    margin: 2rem auto 0;
 
     .card__title {
       border-bottom: 0.5rem @blue-secondary solid;
