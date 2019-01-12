@@ -20,7 +20,9 @@
 <hr/>
 
 ## ❓ about:
-<p>personal portfolio to showcase my <i style="color: #FF6767;">design</i>, <i style="color: #007AFE;">web dev</i>, and <i style="color: #30DEB6;">aws</i> skills.
+<p>Personal portfolio to showcase my <i style="color: #FF6767;">design</i>, <i style="color: #007AFE;">web dev</i>, and <i style="color: #30DEB6;">aws</i> skills.
+  
+Project managed using [@ZenHub](https://github.com/ZenHubIO)
 <hr/>
 
 ## 🛠 tools:
@@ -35,9 +37,9 @@
 features |
 --------|
 ✅ design |
-✅ chore: develop |
-❌ chore: static hosting in S3 |
-❌ chore: register domain Route53 |
+⚠ chore: develop |
+✅ chore: static hosting in S3 |
+✅ chore: register domain Route53 |
 ❌ chore: CDN with CloudFront |
 ❌ chore: CICD with TravisCI |
 ❌ feat: filter projects by tools |
