@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+
     <!-- nav -->
     <section id="topnav">
       <div class="topnav__wrapper">
@@ -25,18 +26,16 @@
           <div class="home__text">
             <p>
               I am an energetic ⚡
-              <span class="is-orange">Computer Scientist</span><br>
-              who loves
-              <span class="is-red">good design</span> 🎨 <br>
-              and creating
+              <span class="is-orange">Computer Scientist</span>
+              <br>who loves
+              <span class="is-red">good design</span> 🎨
+              <br>and creating
               <span class="is-primary">beautiful web apps</span>.
             </p>
-            <p>
+            <p class="hide-xxs">
               Located in Las Vegas, NV.
               <br>I specialize in
-              <span
-                class="is-green"
-              >Serverless Front End + Design</span>.
+              <span class="is-green">Serverless Front End + Design</span>.
             </p>
           </div>
           <div class="home__buttons">
@@ -408,7 +407,9 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <p>built with <span class="is-red">❤</span> and ☕ | open-sourced on</p>
+          <p>built with
+            <span class="is-red">❤</span> and ☕ | open-sourced on
+          </p>
           <font-awesome-icon class="footer-icon" :icon="['fab', 'github']"></font-awesome-icon>
         </div>
       </footer>
@@ -449,6 +450,7 @@ export default class App extends Vue {}
 
   .topnav__wrapper {
     width: 90%;
+    max-width: 75rem;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -476,18 +478,24 @@ export default class App extends Vue {}
   justify-content: center;
 
   .home__wrapper {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
+    padding: 2rem;
 
     .home__figure {
       text-align: center;
 
       .home__profile {
-        width: calc(20rem + 10vw);
-        max-width: 30rem;
+        width: calc(15rem + 10vw);
+        max-width: 21rem;
         border-radius: 50%;
         box-shadow: @dark-shadow;
+        margin-bottom: 1vh;
+
+        @media (min-width: 800px ) {
+          max-width: 25rem;
+        }
       }
     }
 
@@ -495,10 +503,32 @@ export default class App extends Vue {}
       display: flex;
       align-items: center;
       justify-content: center;
+      img {
+        width: calc(15rem + 10vw);
+
+        @media (min-width: 700px) {
+          max-width: 230px;
+        }
+      }
     }
 
     .home__text {
       text-align: center;
+
+      p {
+        font-size: calc(1.5rem + 0.5vw);
+      }
+
+      @media (max-width: 400px) {
+        margin-top: 0;
+        line-height: 2.2rem;
+      }
+
+      .hide-xxs {
+        @media (max-width: 337px) {
+          display: none;
+        }
+      }
     }
 
     .home__buttons {
@@ -511,7 +541,19 @@ export default class App extends Vue {}
         height: 5rem;
 
         &:first-child {
-          margin-bottom: 2rem;
+          margin-bottom: 1.5rem;
+
+          @media (max-width: 400px) {
+            margin-bottom: 1rem;
+          }
+          @media (max-height: 667px) {
+            display: none;
+          }
+        }
+        &:last-child {
+          @media (max-height: 640px) {
+            display: none;
+          }
         }
       }
     }
