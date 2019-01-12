@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+
     <!-- nav -->
     <section id="topnav">
       <div class="topnav__wrapper">
