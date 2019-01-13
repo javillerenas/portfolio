@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-
     <!-- nav -->
     <section id="topnav">
       <div class="topnav__wrapper">
@@ -39,8 +38,12 @@
             </p>
           </div>
           <div class="home__buttons">
-            <button class="btn btn--red btn--wide">Contact me!</button>
-            <button class="btn btn--blue btn--wide">Resume</button>
+            <a href="mailto:javr.llerenas@gmail.com">
+              <button class="btn btn--red btn--wide">Contact me!</button>
+            </a>
+            <a href="/Javier Llerenas Resume.pdf" target="_blank">
+              <button class="btn btn--blue btn--wide">Resume</button>
+            </a>
           </div>
         </div>
       </section>
@@ -56,7 +59,7 @@
                 <div class="card bg-white flex-center flex-column">
                   <div class="card__header flex-center flex-column">
                     <figure class="card__icon">
-                      <img src="@/assets/imgs/jlogo.svg" alt>
+                      <img src="@/assets/imgs/icons/front.png" alt>
                     </figure>
                     <h3 class="card__title">Frontend Dev</h3>
                     <p
@@ -122,7 +125,7 @@
                 <div class="card bg-white flex-center flex-column">
                   <div class="card__header flex-center flex-column">
                     <figure class="card__icon">
-                      <img src="@/assets/imgs/jlogo.svg" alt>
+                      <img src="@/assets/imgs/icons/back.png" alt>
                     </figure>
                     <h3 class="card__title">Backend Dev</h3>
                     <p
@@ -187,9 +190,9 @@
                 <div class="card bg-white flex-center flex-column">
                   <div class="card__header flex-center flex-column">
                     <figure class="card__icon">
-                      <img src="@/assets/imgs/jlogo.svg" alt>
+                      <img src="@/assets/imgs/icons/design.png" alt>
                     </figure>
-                    <h3 class="card__title">Frontend Dev</h3>
+                    <h3 class="card__title">Design</h3>
                     <p class="card__description">
                       As a creative person, I seriously
                       <span class="is-red">❤</span> designing UIs and prototyping apps
@@ -220,7 +223,7 @@
                 <div class="card bg-white flex-center flex-column">
                   <div class="card__header flex-center flex-column">
                     <figure class="card__icon">
-                      <img src="@/assets/imgs/jlogo.svg" alt>
+                      <img src="@/assets/imgs/icons/langs.png" alt>
                     </figure>
                     <h3 class="card__title">Languages</h3>
                     <p class="card__description">
@@ -288,7 +291,6 @@
           <div class="section__background bg--skewed bg-orange flex flex-center flex-column">
             <h1 class="title title--white">Projects</h1>
             <div class="project__cards">
-              <!-- frontend -->
               <div class="project bg--content">
                 <div class="card card--shadow bg-white flex-center flex-column">
                   <div class="card__header flex-center flex-column">
@@ -302,10 +304,12 @@
                     <div class="project__pills">
                       <p class="pill bg-green is-white">vue</p>
                       <p class="pill bg-red is-white">adobeXD</p>
-                      <p class="pill bg-orange">aws lambda</p>
+                      <p class="pill bg-orange">aws</p>
                     </div>
                     <button class="btn btn--blue">
-                      <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
+                      <a href="http://www.github.com/javillerenas/portfolio" target="_blank">
+                        <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
+                      </a>
                     </button>
                   </div>
                 </div>
@@ -324,9 +328,11 @@
                       <p class="pill bg-green is-white">vue</p>
                       <p class="pill bg-green is-white">bulma</p>
                     </div>
-                    <button class="btn btn--blue">
-                      <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
-                    </button>
+                    <a href="https://github.com/javillerenas/UpVote" target="_blank">
+                      <button class="btn btn--blue">
+                        <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -343,11 +349,16 @@
                     <div class="project__pills">
                       <p class="pill bg-green is-white">vue</p>
                       <p class="pill bg-red is-white">adobeXD</p>
-                      <p class="pill bg-orange">aws lambda</p>
+                      <p class="pill bg-orange">aws</p>
                     </div>
-                    <button class="btn btn--blue">
-                      <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
-                    </button>
+                    <a
+                      href="https://www.github.com/javillerenas/car-price-predictor"
+                      target="_blank"
+                    >
+                      <button class="btn btn--blue">
+                        <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -359,7 +370,7 @@
 
       <!-- contact -->
       <section id="contact" class="contact">
-        <section class="container flex flex-center">
+        <section class="section-container flex flex-center">
           <div class="card bg-white card--shadow">
             <div class="card__header">
               <h1 class="card__title">Let's Work Together! 👍</h1>
@@ -483,8 +494,14 @@ export default class App extends Vue {}
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    margin-bottom: 3rem;
+
+    @media (min-width: 1100px) {
+      margin-bottom: 5rem;
+    }
 
     .home__figure {
+      pointer-events: none;
       text-align: center;
 
       .home__profile {
@@ -501,6 +518,7 @@ export default class App extends Vue {}
     }
 
     .home__name {
+      pointer-events: none;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -517,7 +535,8 @@ export default class App extends Vue {}
       text-align: center;
 
       p {
-        font-size: calc(1.5rem + 0.5vw);
+        margin-top: 0.5rem;
+        font-size: calc(1.5rem + 0.3vw);
       }
 
       @media (max-width: 400px) {
@@ -538,8 +557,15 @@ export default class App extends Vue {}
       align-items: center;
       flex-direction: column;
 
-      > button {
+      button {
         height: 5rem;
+        transition: all 0.2s ease;
+
+        &:hover {
+          width: 19rem;
+          height: 6rem;
+          font-size: 2.2rem;
+        }
 
         &:first-child {
           margin-bottom: 1.5rem;
@@ -551,8 +577,9 @@ export default class App extends Vue {}
             display: none;
           }
         }
+
         &:last-child {
-          @media (max-height: 640px) {
+          @media (max-height: 700px) {
             display: none;
           }
         }
@@ -572,7 +599,7 @@ export default class App extends Vue {}
 #skills {
   .title {
     margin: 2.5rem;
-    text-shadow: 5px 5px 30px @blue-secondary;
+    text-shadow: 5px 5px 30px darken(@cold-blue, 40%);
   }
   .section__background {
     position: relative;
@@ -583,27 +610,51 @@ export default class App extends Vue {}
       position: absolute;
       content: "";
       width: 100%;
-      height: 102%;
+      height: 120%;
       top: 0;
       left: 0;
       background-color: @cold-blue;
       transform-origin: top left;
       transform: skewY(-3deg);
+      box-shadow: 0px -5px 50px 15px darken(@background-light, 20%);
     }
   }
 
   .skills__cards {
     margin: 2rem 0 0;
-    width: 80%;
+    width: 90%;
+    max-width: 100rem;
+
+    @media (min-width: 800px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
 
     > div {
       margin-bottom: 2rem;
+
+      @media (min-width: 800px) {
+        width: 45%;
+      }
+
+      .card__header {
+        figure {
+          width: 6rem;
+          img {
+            width: 100%;
+          }
+        }
+      }
 
       .card__title {
         color: black;
       }
 
       .card__body {
+        max-width: 300px;
+
         .card__icon {
           text-align: center;
           margin: 0 0.5rem 1rem;
@@ -642,7 +693,7 @@ export default class App extends Vue {}
 
   .title {
     margin: 2.5rem;
-    text-shadow: 5px 5px 30px darken(@cool-orange, 20%);
+    text-shadow: 5px 5px 30px darken(@cool-orange, 60%);
   }
 
   .section__background {
@@ -665,9 +716,21 @@ export default class App extends Vue {}
 
   .project__cards {
     margin: 2rem 0 0;
-    width: 80%;
+    width: 90%;
+    max-width: 100rem;
+
+    @media (min-width: 800px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
 
     .project {
+      @media (min-width: 800px) {
+        width: 45%;
+      }
+
       .card__header {
         margin-bottom: 1rem;
       }
@@ -690,13 +753,15 @@ export default class App extends Vue {}
       }
 
       .card__body {
-        width: 100%;
+        width: 90%;
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
 
         .project__pills {
           flex: 3;
+          display: flex;
+          justify-content: center;
         }
 
         p {
@@ -705,6 +770,16 @@ export default class App extends Vue {}
         }
 
         button {
+          box-shadow: unset;
+
+          a {
+            color: white;
+          }
+
+          &:hover {
+            box-shadow: @blue-shadow;
+          }
+
           > * {
             font-size: 3rem;
           }
@@ -718,10 +793,14 @@ export default class App extends Vue {}
 }
 
 #contact {
-  .container {
-    width: 80%;
+  .section-container {
+    width: 90%;
     height: 45vh;
     margin: 2rem auto 0;
+
+    .card {
+      max-width: 60rem;
+    }
 
     .card__title {
       border-bottom: 0.5rem @blue-secondary solid;
@@ -733,6 +812,15 @@ export default class App extends Vue {}
 
     button.btn {
       margin-top: 2rem;
+
+      height: 5rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        width: 19rem;
+        height: 6rem;
+        font-size: 2.2rem;
+      }
     }
   }
 }
@@ -747,6 +835,8 @@ export default class App extends Vue {}
     .footer__container {
       display: flex;
       justify-content: space-around;
+      max-width: 100rem;
+      margin: auto;
 
       .footer__logo {
         h3 {
