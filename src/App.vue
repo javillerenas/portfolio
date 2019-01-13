@@ -10,7 +10,7 @@
           <font-awesome-icon :icon="['fas', 'bars']"/>
         </figure>
         <nav id="side-nav" class="side-nav flex flex-center" :class="sideNavClass">
-          <div class="side-nav__wrapper flex flex-center flex-column"  @click="removeSideNav()">
+          <div class="side-nav__wrapper flex flex-center flex-column" @click="removeSideNav()">
             <a href="#home">
               <button class="btn btn--light-grey btn--wide">Home</button>
             </a>
@@ -456,7 +456,7 @@ import { Component, Vue } from "vue-property-decorator";
   components: {}
 })
 export default class App extends Vue {
-  showSideNav = true;
+  showSideNav = false;
 
   get sideNavClass() {
     return this.showSideNav ? "side-nav--show" : "side-nav--hidden";
@@ -475,7 +475,6 @@ export default class App extends Vue {
 
 .hero {
   width: 100vw;
-  min-height: 100vh;
 }
 
 @topnav-height: 6rem;
@@ -508,6 +507,10 @@ export default class App extends Vue {
       border-radius: 4px;
       border: 1px solid @background-light;
       font-size: 2rem;
+
+      @media (min-width: 700px) {
+        display: none;
+      }
     }
   }
 
@@ -529,20 +532,49 @@ export default class App extends Vue {
       width: 30vw;
     }
 
+    &#side-nav {
+      @media (min-width: 700px) {
+        transform: translateX(0);
+        position: relative;
+        height: 100%;
+        width: 60%;
+        background: none;
+
+        .side-nav__wrapper {
+          flex-direction: row;
+
+        a {
+          width: auto;
+
+          button {
+            height: 3.5rem;
+            box-shadow: none;
+            font-size: 1.6rem;
+
+            &:hover {
+              box-shadow: @white-shadow;
+            }
+          }
+        }
+        }
+      }
+    }
+
     &--hidden {
       @media (max-width: 425px) {
-        transform: translateX(75vh);
+        transform: translateX(75vw);
       }
       @media (min-width: 426px) {
-        transform: translateX(50vh);
+        transform: translateX(50vw);
       }
       @media (min-width: 550px) {
-        transform: translateX(30vh);
+        transform: translateX(30vw);
       }
     }
 
     &__wrapper {
       height: 40%;
+      min-height: 35rem;
       width: 100%;
       justify-content: space-around;
 
@@ -551,12 +583,10 @@ export default class App extends Vue {
 
         button {
           width: 100%;
-          box-shadow: @light-blue-shadow;
+          box-shadow: @white-shadow;
           color: @dark-blue;
-
-          &:hover {
-            color: white;
-          }
+          background: white;
+          border: none;
         }
       }
     }
@@ -878,6 +908,7 @@ export default class App extends Vue {
   .section-container {
     width: 90%;
     height: 45vh;
+    max-height: 45rem;
     margin: 2rem auto 0;
 
     .card {
