@@ -509,14 +509,14 @@ export default class App extends Vue {
 
 #app {
   margin: 0 auto;
-  max-width: 1200px;
+  // max-width: 1200px;
   box-sizing: content-box;
   box-shadow: 0px 0px 50px @grey-darker;
 
   @media (min-width: 1200px) {
-    border-left: 2px solid @grey-darker;
-    border-right: 2px solid @grey-darker;
-    border-bottom: 2px solid @grey-darker;
+    // border-left: 2px solid @grey-darker;
+    // border-right: 2px solid @grey-darker;
+    // border-bottom: 2px solid @grey-darker;
   }
 }
 
@@ -534,7 +534,7 @@ main {
   box-sizing: content-box;
   z-index: 2;
   width: 100%;
-  max-width: 1200px;
+  // max-width: 1200px;
   height: @topnav-height;
   position: fixed;
   top: 0;
@@ -832,7 +832,7 @@ main {
       position: absolute;
       content: "";
       width: 100%;
-      height: 120%;
+      height: 140%;
       top: 0;
       left: 0;
       background-color: @cold-blue;
