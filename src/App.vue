@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <main @click="removeSideNav()">
+    <main>
       <!-- nav -->
       <section id="topnav">
         <div class="topnav__wrapper">
@@ -9,11 +9,13 @@
               <img src="@/assets/imgs/jlogo.svg" alt="javi-logo">
             </figure>
           </a>
-          <figure class="topnav__hamburger flex-center" @click="showSideNav = !showSideNav">
-            <font-awesome-icon :icon="['fas', 'bars']"/>
-          </figure>
-          <nav id="side-nav" class="side-nav flex flex-center" :class="sideNavClass">
-            <div class="side-nav__wrapper flex flex-center flex-column" @click="removeSideNav()">
+          <a href="#" @click.prevent="toggleSideNav()">
+            <figure class="topnav__hamburger flex-center">
+              <font-awesome-icon :icon="['fas', 'bars']"/>
+            </figure>
+          </a>
+          <nav id="side-nav" class="side-nav flex flex-center" :class="sideNavClass" @click="removeSideNav()">
+            <div class="side-nav__wrapper flex flex-center flex-column">
               <a href="#home">
                 <button class="btn btn--light-grey btn--wide">Home</button>
               </a>
@@ -35,6 +37,7 @@
       </section>
 
       <!-- home -->
+      <div class="remove-sidenav" @click="removeSideNav()">
       <section id="home" class="home">
         <div class="home__wrapper">
           <div class="figure-wrapper">
@@ -471,6 +474,7 @@
         </div>
       </footer>
       <!-- end main -->
+      </div>
     </main>
   </div>
 </template>
@@ -488,6 +492,10 @@ export default class App extends Vue {
     return this.showSideNav ? "side-nav--show" : "side-nav--hidden";
   }
 
+  toggleSideNav () {
+    this.showSideNav = !this.showSideNav;
+    console.log(this.showSideNav);
+  }
   removeSideNav() {
     if (this.showSideNav) {
       this.showSideNav = !this.showSideNav;
