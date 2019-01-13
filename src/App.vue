@@ -10,7 +10,7 @@
           <font-awesome-icon :icon="['fas', 'bars']"/>
         </figure>
         <nav id="side-nav" class="side-nav flex flex-center" :class="sideNavClass">
-          <div class="side-nav__wrapper flex flex-center flex-column"  @click="removeSideNav()">
+          <div class="side-nav__wrapper flex flex-center flex-column" @click="removeSideNav()">
             <a href="#home">
               <button class="btn btn--light-grey btn--wide">Home</button>
             </a>
@@ -507,6 +507,10 @@ export default class App extends Vue {
       border-radius: 4px;
       border: 1px solid @background-light;
       font-size: 2rem;
+
+      @media (min-width: 700px) {
+        display: none;
+      }
     }
   }
 
@@ -528,6 +532,34 @@ export default class App extends Vue {
       width: 30vw;
     }
 
+    &#side-nav {
+      @media (min-width: 700px) {
+        transform: translateX(0);
+        position: relative;
+        height: 100%;
+        width: 60%;
+        background: none;
+
+        .side-nav__wrapper {
+          flex-direction: row;
+
+        a {
+          width: auto;
+
+          button {
+            height: 3.5rem;
+            box-shadow: none;
+            font-size: 1.6rem;
+
+            &:hover {
+              box-shadow: @white-shadow;
+            }
+          }
+        }
+        }
+      }
+    }
+
     &--hidden {
       @media (max-width: 425px) {
         transform: translateX(75vw);
@@ -542,6 +574,7 @@ export default class App extends Vue {
 
     &__wrapper {
       height: 40%;
+      min-height: 35rem;
       width: 100%;
       justify-content: space-around;
 
