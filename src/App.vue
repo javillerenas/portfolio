@@ -456,7 +456,7 @@ import { Component, Vue } from "vue-property-decorator";
   components: {}
 })
 export default class App extends Vue {
-  showSideNav = true;
+  showSideNav = false;
 
   get sideNavClass() {
     return this.showSideNav ? "side-nav--show" : "side-nav--hidden";
@@ -475,7 +475,6 @@ export default class App extends Vue {
 
 .hero {
   width: 100vw;
-  min-height: 100vh;
 }
 
 @topnav-height: 6rem;
@@ -531,13 +530,13 @@ export default class App extends Vue {
 
     &--hidden {
       @media (max-width: 425px) {
-        transform: translateX(75vh);
+        transform: translateX(75vw);
       }
       @media (min-width: 426px) {
-        transform: translateX(50vh);
+        transform: translateX(50vw);
       }
       @media (min-width: 550px) {
-        transform: translateX(30vh);
+        transform: translateX(30vw);
       }
     }
 
@@ -551,12 +550,10 @@ export default class App extends Vue {
 
         button {
           width: 100%;
-          box-shadow: @light-blue-shadow;
+          box-shadow: @white-shadow;
           color: @dark-blue;
-
-          &:hover {
-            color: white;
-          }
+          background: white;
+          border: none;
         }
       }
     }
@@ -878,6 +875,7 @@ export default class App extends Vue {
   .section-container {
     width: 90%;
     height: 45vh;
+    max-height: 45rem;
     margin: 2rem auto 0;
 
     .card {
