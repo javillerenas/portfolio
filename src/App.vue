@@ -6,13 +6,32 @@
         <figure class="topnav__logo-wrapper">
           <img src="@/assets/imgs/jlogo.svg" alt="javi-logo">
         </figure>
-        <figure class="topnav__hamburger flex-center">
+        <figure class="topnav__hamburger flex-center" @click="showSideNav = !showSideNav">
           <font-awesome-icon :icon="['fas', 'bars']"/>
         </figure>
+        <nav id="side-nav" class="side-nav flex flex-center" :class="sideNavClass">
+          <div class="side-nav__wrapper flex flex-center flex-column"  @click="removeSideNav()">
+            <a href="#home">
+              <button class="btn btn--light-grey btn--wide">Home</button>
+            </a>
+            <a href="#skills">
+              <button class="btn btn--light-grey btn--wide">Skills</button>
+            </a>
+            <a href="#projects">
+              <button class="btn btn--light-grey btn--wide">Projects</button>
+            </a>
+            <a href="mailto:javr.llerenas@gmail.com">
+              <button class="btn btn--light-grey btn--wide">Contact</button>
+            </a>
+            <a href="/Javier Llerenas Resume.pdf">
+              <button class="btn btn--light-grey btn--wide">Resume</button>
+            </a>
+          </div>
+        </nav>
       </div>
     </section>
 
-    <main>
+    <main @click="removeSideNav()">
       <!-- home -->
       <section id="home" class="home">
         <div class="home__wrapper">
@@ -402,9 +421,9 @@
             </div>
             <div class="footer__nav">
               <nav class="flex-center flex-column">
-                <a href="#">home</a>
-                <a href="#">skills</a>
-                <a href="#">projects</a>
+                <a href="#home">home</a>
+                <a href="#skills">skills</a>
+                <a href="#projects">projects</a>
               </nav>
             </div>
             <div class="footer__follow">
@@ -436,7 +455,19 @@ import { Component, Vue } from "vue-property-decorator";
 @Component({
   components: {}
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  showSideNav = true;
+
+  get sideNavClass() {
+    return this.showSideNav ? "side-nav--show" : "side-nav--hidden";
+  }
+
+  removeSideNav() {
+    if (this.showSideNav) {
+      this.showSideNav = !this.showSideNav;
+    }
+  }
+}
 </script>
 
 <style lang="less">
@@ -477,6 +508,57 @@ export default class App extends Vue {}
       border-radius: 4px;
       border: 1px solid @background-light;
       font-size: 2rem;
+    }
+  }
+
+  .side-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: @cold-blue;
+    height: 100vh;
+    transition: transform 0.3s ease;
+
+    @media (max-width: 425px) {
+      width: 75vw;
+    }
+    @media (min-width: 426px) {
+      width: 50vw;
+    }
+    @media (min-width: 550px) {
+      width: 30vw;
+    }
+
+    &--hidden {
+      @media (max-width: 425px) {
+        transform: translateX(75vh);
+      }
+      @media (min-width: 426px) {
+        transform: translateX(50vh);
+      }
+      @media (min-width: 550px) {
+        transform: translateX(30vh);
+      }
+    }
+
+    &__wrapper {
+      height: 40%;
+      width: 100%;
+      justify-content: space-around;
+
+      a {
+        width: 60%;
+
+        button {
+          width: 100%;
+          box-shadow: @light-blue-shadow;
+          color: @dark-blue;
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
     }
   }
 }
