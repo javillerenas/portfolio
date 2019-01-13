@@ -3,9 +3,11 @@
     <!-- nav -->
     <section id="topnav">
       <div class="topnav__wrapper">
-        <figure class="topnav__logo-wrapper">
-          <img src="@/assets/imgs/jlogo.svg" alt="javi-logo">
-        </figure>
+        <a href="#home">
+          <figure class="topnav__logo-wrapper">
+            <img src="@/assets/imgs/jlogo.svg" alt="javi-logo">
+          </figure>
+        </a>
         <figure class="topnav__hamburger flex-center" @click="showSideNav = !showSideNav">
           <font-awesome-icon :icon="['fas', 'bars']"/>
         </figure>
@@ -35,9 +37,25 @@
       <!-- home -->
       <section id="home" class="home">
         <div class="home__wrapper">
-          <figure class="home__figure">
-            <img class="home__profile" src="@/assets/imgs/profile-circle.png" alt>
-          </figure>
+          <div class="figure-wrapper">
+            <div class="icon-wave-wrapper">
+              <i class="icon-wave">👋</i>
+            </div>
+            <figure class="home__figure">
+              <img class="home__profile" src="@/assets/imgs/profile-circle.png" alt>
+            </figure>
+            <div class="social-icons">
+              <a href="https://www.github.com/javillerenas" target="_blank">
+                <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
+              </a>
+              <a href="https://www.linkedin.com/in/javillerenas" target="_blank">
+                <font-awesome-icon :icon="['fab', 'linkedin']"></font-awesome-icon>
+              </a>
+              <a href="https://www.twitter.com/javibalvin" target="_blank">
+                <font-awesome-icon :icon="['fab', 'twitter']"></font-awesome-icon>
+              </a>
+            </div>
+          </div>
           <figure class="home__name">
             <img src="@/assets/imgs/name.svg" alt="Javier Llerenas">
           </figure>
@@ -414,9 +432,11 @@
         <div class="footer__main">
           <div class="footer__container flex-center">
             <div class="footer__logo flex-center flex-column">
-              <figure>
-                <img src="@/assets/imgs/jlogo.svg" alt="javier llerenas">
-              </figure>
+              <a href="#home">
+                <figure>
+                  <img src="@/assets/imgs/jlogo.svg" alt="javier llerenas">
+                </figure>
+              </a>
               <h3>Javier</h3>
             </div>
             <div class="footer__nav">
@@ -429,9 +449,15 @@
             <div class="footer__follow">
               <p>Follow me on:</p>
               <div class="footer__brand-nav">
-                <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
-                <font-awesome-icon :icon="['fab', 'linkedin']"></font-awesome-icon>
-                <font-awesome-icon :icon="['fab', 'twitter']"></font-awesome-icon>
+                <a href="https://www.github.com/javillerenas" target="_blank">
+                  <font-awesome-icon :icon="['fab', 'github']"></font-awesome-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/javillerenas" target="_blank">
+                  <font-awesome-icon :icon="['fab', 'linkedin']"></font-awesome-icon>
+                </a>
+                <a href="https://www.twitter.com/javibalvin" target="_blank">
+                  <font-awesome-icon :icon="['fab', 'twitter']"></font-awesome-icon>
+                </a>
               </div>
             </div>
           </div>
@@ -543,19 +569,19 @@ export default class App extends Vue {
         .side-nav__wrapper {
           flex-direction: row;
 
-        a {
-          width: auto;
+          a {
+            width: auto;
 
-          button {
-            height: 3.5rem;
-            box-shadow: none;
-            font-size: 1.6rem;
+            button {
+              height: 3.5rem;
+              box-shadow: none;
+              font-size: 1.6rem;
 
-            &:hover {
-              box-shadow: @white-shadow;
+              &:hover {
+                box-shadow: @white-shadow;
+              }
             }
           }
-        }
         }
       }
     }
@@ -612,6 +638,57 @@ export default class App extends Vue {
       margin-bottom: 5rem;
     }
 
+    .figure-wrapper {
+      position: relative;
+      margin: 0 auto;
+      width: max-content;
+
+      .icon-wave-wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        font-size: 7rem;
+        left: -55%;
+
+        @media (max-width: 600px) {
+          font-size: 5rem;
+          left: -40%;
+        }
+        @media (min-width: 800px) {
+          font-size: 6rem;
+          left: -45%;
+        }
+        @media (max-width: 400px) {
+          display: none;
+        }
+      }
+
+      .social-icons {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        right: -30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 4rem;
+
+        > * {
+          color: @grey;
+        }
+
+        > *:nth-child(2) {
+          position: relative;
+          right: -40%;
+        }
+
+        @media (max-width: 400px) {
+          display: none;
+        }
+      }
+    }
     .home__figure {
       pointer-events: none;
       text-align: center;
@@ -972,9 +1049,14 @@ export default class App extends Vue {
           margin: 0 0 1rem;
         }
         .footer__brand-nav {
+          color: @grey;
           display: flex;
           justify-content: space-around;
           font-size: 2.5rem;
+
+          > * {
+            color: @grey-darker;
+          }
         }
       }
     }
