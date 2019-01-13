@@ -1,39 +1,39 @@
 <template>
   <div id="app">
-    <!-- nav -->
-    <section id="topnav">
-      <div class="topnav__wrapper">
-        <a href="#home">
-          <figure class="topnav__logo-wrapper">
-            <img src="@/assets/imgs/jlogo.svg" alt="javi-logo">
-          </figure>
-        </a>
-        <figure class="topnav__hamburger flex-center" @click="showSideNav = !showSideNav">
-          <font-awesome-icon :icon="['fas', 'bars']"/>
-        </figure>
-        <nav id="side-nav" class="side-nav flex flex-center" :class="sideNavClass">
-          <div class="side-nav__wrapper flex flex-center flex-column" @click="removeSideNav()">
-            <a href="#home">
-              <button class="btn btn--light-grey btn--wide">Home</button>
-            </a>
-            <a href="#skills">
-              <button class="btn btn--light-grey btn--wide">Skills</button>
-            </a>
-            <a href="#projects">
-              <button class="btn btn--light-grey btn--wide">Projects</button>
-            </a>
-            <a href="mailto:javr.llerenas@gmail.com">
-              <button class="btn btn--light-grey btn--wide">Contact</button>
-            </a>
-            <a href="/Javier Llerenas Resume.pdf">
-              <button class="btn btn--light-grey btn--wide">Resume</button>
-            </a>
-          </div>
-        </nav>
-      </div>
-    </section>
-
     <main @click="removeSideNav()">
+      <!-- nav -->
+      <section id="topnav">
+        <div class="topnav__wrapper">
+          <a href="#home">
+            <figure class="topnav__logo-wrapper">
+              <img src="@/assets/imgs/jlogo.svg" alt="javi-logo">
+            </figure>
+          </a>
+          <figure class="topnav__hamburger flex-center" @click="showSideNav = !showSideNav">
+            <font-awesome-icon :icon="['fas', 'bars']"/>
+          </figure>
+          <nav id="side-nav" class="side-nav flex flex-center" :class="sideNavClass">
+            <div class="side-nav__wrapper flex flex-center flex-column" @click="removeSideNav()">
+              <a href="#home">
+                <button class="btn btn--light-grey btn--wide">Home</button>
+              </a>
+              <a href="#skills">
+                <button class="btn btn--light-grey btn--wide">Skills</button>
+              </a>
+              <a href="#projects">
+                <button class="btn btn--light-grey btn--wide">Projects</button>
+              </a>
+              <a href="mailto:javr.llerenas@gmail.com">
+                <button class="btn btn--light-grey btn--wide">Contact</button>
+              </a>
+              <a href="/Javier Llerenas Resume.pdf">
+                <button class="btn btn--light-grey btn--wide">Resume</button>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </section>
+
       <!-- home -->
       <section id="home" class="home">
         <div class="home__wrapper">
@@ -499,15 +499,34 @@ export default class App extends Vue {
 <style lang="less">
 @import "./assets/styles/styles.less";
 
+#app {
+  margin: 0 auto;
+  max-width: 1200px;
+  box-sizing: content-box;
+  box-shadow: 0px 0px 50px @grey-darker;
+
+  @media (min-width: 1200px) {
+    border-left: 2px solid @grey-darker;
+    border-right: 2px solid @grey-darker;
+    border-bottom: 2px solid @grey-darker;
+  }
+}
+
+main {
+  background-color: @background-light;
+}
+
 .hero {
-  width: 100vw;
+  width: 100%;
 }
 
 @topnav-height: 6rem;
 // ---
 #topnav {
+  box-sizing: content-box;
   z-index: 2;
-  width: 100vw;
+  width: 100%;
+  max-width: 1200px;
   height: @topnav-height;
   position: fixed;
   top: 0;
@@ -515,6 +534,11 @@ export default class App extends Vue {
   align-items: center;
   background-color: @blue-secondary;
   background-image: linear-gradient(180deg, #00bdfe 25%, #007afe 100%);
+  border-bottom: 1px solid @grey-darker;
+
+  @media (min-width: 1200px) {
+    border-top: 1px solid @grey-darker;
+  }
 
   .topnav__wrapper {
     width: 90%;
@@ -621,13 +645,13 @@ export default class App extends Vue {
 
 // ---
 #home {
-  margin-top: @topnav-height;
-  height: calc(100vh - @topnav-height);
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
   .home__wrapper {
+    margin-top: 10rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -792,6 +816,7 @@ export default class App extends Vue {
   }
   .section__background {
     position: relative;
+    z-index: 0;
     width: 100%;
 
     &::before {
@@ -805,7 +830,6 @@ export default class App extends Vue {
       background-color: @cold-blue;
       transform-origin: top left;
       transform: skewY(-3deg);
-      box-shadow: 0px -5px 50px 15px darken(@background-light, 20%);
     }
   }
 
@@ -888,6 +912,7 @@ export default class App extends Vue {
   .section__background {
     width: 100%;
     position: relative;
+    z-index: 0;
 
     &::before {
       z-index: -1;

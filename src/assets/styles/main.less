@@ -16,10 +16,16 @@ p {
   box-sizing: border-box;
 }
 
+@fade-level: 80%;
 body {
   margin: 0;
-  background-color: @background-light;
+  background-color: @grey;
+  background: linear-gradient(-45deg, fadeout(@blue-secondary, @fade-level), fadeout(#6c7ae0, @fade-level), fadeout(#23a6d5, @fade-level), fadeout(#23d5ab, @fade-level));
+  background-size: 4000% 400%;
+  animation: Gradient 15s ease infinite;
 }
+
+
 
 a, button {
   cursor: pointer;
@@ -180,5 +186,40 @@ a, button {
 .hide-xs {
   @media (max-width: 400px) {
     display: none;
+  }
+}
+
+// --- body background
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
