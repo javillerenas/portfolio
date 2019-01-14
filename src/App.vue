@@ -657,6 +657,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: url('./assets/imgs/shapes2x.png');
 
   .home__wrapper {
     margin-top: 10rem;
@@ -856,6 +857,10 @@ main {
     > div {
       margin-bottom: 2rem;
 
+      > .card {
+        box-shadow: @dark-shadow;
+      }
+
       @media (min-width: 800px) {
         width: 45%;
       }
@@ -1015,6 +1020,8 @@ main {
 }
 
 #contact {
+    background: url('./assets/imgs/shapes2x.png');
+
   .section-container {
     width: 90%;
     height: 45vh;
