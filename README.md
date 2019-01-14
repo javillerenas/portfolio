@@ -40,7 +40,7 @@ features |
 ✅ chore: develop |
 ✅ chore: static hosting in S3 |
 ✅ chore: register domain Route53 |
-❌ chore: CDN with CloudFront |
-❌ chore: CICD with TravisCI |
-❌ feat: filter projects by tools |
-❌ feat: recent thoughts section (twirter) |
+❌ chore(backend): CDN with CloudFront |
+❌ chore(backend): CICD with TravisCI |
+❌ feat(vue): filter projects by tools using [`Vue Treeselect`](https://vue-treeselect.js.org/) |
+❌ feat(vue): recent thoughts section using [`twitter's API`](https://developer.twitter.com/en/docs.html) |
