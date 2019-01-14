@@ -361,7 +361,7 @@
                       <img src="@/assets/imgs/projects/upvote.png" alt>
                     </figure>
                     <h3 class="card__title">UpVote!</h3>
-                    <p class="card__description">My personal webapge to showcase my skills</p>
+                    <p class="card__description">A "Hacker News"-like site where you can make small posts and <i>upvote</i> other people's</p>
                   </div>
                   <div class="card__body">
                     <div class="project__pills">
@@ -383,7 +383,7 @@
                       <img src="@/assets/imgs/projects/carpricepredictor.png" alt>
                     </figure>
                     <h3 class="card__title">Car Price Predictor</h3>
-                    <p class="card__description">My personal webapge to showcase my skills</p>
+                    <p class="card__description">Web app to predict used cars prices</p>
                   </div>
                   <div class="card__body">
                     <div class="project__pills">
