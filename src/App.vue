@@ -268,12 +268,7 @@
                     <h3 class="card__title">Languages</h3>
                     <p class="card__description">
                       As a
-                      <span class="is-green">Comp. Sci.</span> student, I have learn plenty languages
-                      <br>
-                      <span
-                        class="is-primary"
-                        style="font-size: 1.2rem;"
-                      >#parseltongue #talkdirtytome</span>
+                      <span class="is-green">Comp. Sci.</span> student, I have learnt plenty of languages through my academic and professional career.
                     </p>
                   </div>
                   <div class="card__body flex-center">
@@ -338,7 +333,7 @@
                       <img src="@/assets/imgs/projects/portfolio.png" alt>
                     </figure>
                     <h3 class="card__title">Personal Portfolio</h3>
-                    <p class="card__description">My personal webapge to showcase my skills</p>
+                    <p class="card__description">My personal webpage to showcase my skills in Design and Frontend Web Dev</p>
                   </div>
                   <div class="card__body">
                     <div class="project__pills">
@@ -361,7 +356,10 @@
                       <img src="@/assets/imgs/projects/upvote.png" alt>
                     </figure>
                     <h3 class="card__title">UpVote!</h3>
-                    <p class="card__description">A "Hacker News"-like site where you can make small posts and <i>upvote</i> other people's</p>
+                    <p class="card__description">
+                      A "Hacker News"-like site where you can make small posts and <i>upvote</i> other people's
+                      <br>Created using Vue.js and Bulma.
+                    </p>
                   </div>
                   <div class="card__body">
                     <div class="project__pills">
@@ -383,7 +381,7 @@
                       <img src="@/assets/imgs/projects/carpricepredictor.png" alt>
                     </figure>
                     <h3 class="card__title">Car Price Predictor</h3>
-                    <p class="card__description">Web app to predict used cars prices</p>
+                    <p class="card__description">A simple web app that uses sk-learn to predict the prices of used cars.</p>
                   </div>
                   <div class="card__body">
                     <div class="project__pills">
@@ -416,12 +414,12 @@
               <h1 class="card__title">Let's Work Together! 👍</h1>
               <p class="card__description">
                 I am a very passionate 🔥, energetic ⚡, and
-                friendly 😄 person.
+                friendly 😄 person who enjoys bringing ideas to life.
                 <span
                   class="hide-xs"
                 >
-                  My strengths are in full-stack web
-                  development but also enjoy design projects.
+                  My strength is full-stack web
+                  development, but I also enjoy designing and prototyping ideas.
                 </span>
               </p>
               <button class="btn btn--red btn--wide">Contact Me</button>
@@ -641,10 +639,13 @@ main {
 
         button {
           width: 100%;
-          box-shadow: @white-shadow;
-          color: @dark-blue;
-          background: white;
-          border: none;
+          color: white;
+          background: rgba(255, 255, 255, 0.5);
+          border: 2px solid white;
+
+          &:hover {
+            box-shadow: @white-shadow;
+          }
         }
       }
     }
@@ -653,7 +654,7 @@ main {
 
 // ---
 #home {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -765,12 +766,6 @@ main {
         margin-top: 0;
         line-height: 2.2rem;
       }
-
-      .hide-xxs {
-        @media (max-width: 337px) {
-          display: none;
-        }
-      }
     }
 
     .home__buttons {
@@ -795,18 +790,10 @@ main {
           @media (max-width: 400px) {
             margin-bottom: 1rem;
           }
-          @media (max-height: 667px) {
-            display: none;
-          }
-        }
-
-        &:last-child {
-          @media (max-height: 700px) {
-            display: none;
-          }
         }
       }
     }
+
   }
 }
 
@@ -1025,7 +1012,8 @@ main {
   .section-container {
     width: 90%;
     height: 45vh;
-    max-height: 45rem;
+    min-height: 35rem;
+    max-height: 40rem;
     margin: 2rem auto 0;
 
     .card {
