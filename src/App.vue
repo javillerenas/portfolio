@@ -54,7 +54,7 @@
               <a href="https://www.linkedin.com/in/javillerenas" target="_blank">
                 <font-awesome-icon :icon="['fab', 'linkedin']"></font-awesome-icon>
               </a>
-              <a href="https://www.twitter.com/javibalvin" target="_blank">
+              <a href="https://www.twitter.com/javillerenas_" target="_blank">
                 <font-awesome-icon :icon="['fab', 'twitter']"></font-awesome-icon>
               </a>
             </div>
@@ -630,7 +630,6 @@ main {
 
     &__wrapper {
       height: 40%;
-      min-height: 35rem;
       width: 100%;
       justify-content: space-around;
 
