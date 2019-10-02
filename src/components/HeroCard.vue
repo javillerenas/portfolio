@@ -3,9 +3,9 @@
     <div class="hero-card__content">
       <img src="@/assets/imgs/name.svg" alt="Name">
       <div class="hero-card__text">
-        <p>Full stack <span class="red">Web Developer</span> and <span class="green">UI Designer</span> that <br>loves creating beautiful web apps.</p>
-        <p>Creator of <a class="blue" href="#">CodeGems.io</a></p>
-        <p>Currently a Cloud Developer <a class="orange" href="https://aws.amazon.com">@aws</a>.</p>
+        <p>Full stack <span class="bg-red black">Web Developer</span> and <span class="bg-green black">UI Designer</span> that <br>loves creating beautiful web apps.</p>
+        <p>Creator of <a class="bg-blue black" href="#">CodeGems.io</a></p>
+        <p>Currently a Cloud Developer <a class="bg-orange black" href="https://aws.amazon.com">@aws</a>.</p>
       </div>
       <p class="follow-me blue">Follow Me:</p>
       <div class="hero-card__social">
@@ -50,12 +50,11 @@ export default class HeroCard extends Vue {}
 @import '../assets/styles/styles.less';
 
 .hero-card {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont;
   background-color: @black;
   display: flex;
   justify-content: space-around;
   padding: 6rem 8rem;
-  width: 80vw;
+  // width: 80vw;
   max-width: 1200px;
   display: flex;
   border-top-right-radius: @card-border;

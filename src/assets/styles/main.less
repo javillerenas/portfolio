@@ -55,31 +55,50 @@ a, button {
 .orange {
   color: @orange;
 }
+.black {
+  color: @black;
+}
+.bg-red {
+  background-color: @red;
+}
+.bg-blue {
+  background-color: @blue;
+}
+.bg-green {
+  background-color: @green;
+}
+.bg-orange {
+  background-color: @orange;
+}
 
 // buttons
 .btn {
   font-size: 2rem;
-  letter-spacing: 0.2rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
 }
 .btn--blue {
   color: white;
   background-color: @blue;
   background-image: linear-gradient(to right, @blue, lighten(@blue, 20%));
-  box-shadow: 0px 0px 30px @blue;
+  box-shadow: 0px 0px 5px @blue;
 }
 .btn--grey {
   color: white;
   background-color: @dark-grey;
   background-image: linear-gradient(to right, @dark-grey, lighten(@dark-grey, 20%));
-  box-shadow: 0px 0px 30px @dark-grey;
+  box-shadow: 0px 0px 5px @dark-grey;
 }
 .btn--green {
   color: white;
   background-color: @green;
   background-image: linear-gradient(to right, @green, lighten(@green, 20%));
-  box-shadow: 0px 0px 30px @green;
+  box-shadow: 0px 0px 5px @green;
 }
 
 

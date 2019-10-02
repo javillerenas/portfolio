@@ -3,6 +3,12 @@
     <div class="hero">
       <HeroCard />
     </div>
+    <div class="projects">
+      <h1 class="projects__title title">Projects</h1>
+      <div class="projects__list">
+        <ProjectCard />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -37,8 +43,10 @@ body {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 5rem;
 
   .hero {
+    padding: 0 calc(1rem + 2vw);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -52,6 +60,13 @@ body {
         top: 0;
       }
     }
+  }
+
+  .projects {
+    padding: 0 calc(1rem + 2vw);
+    display: flex;
+    flex-direction: column;
+    
   }
 
 }
