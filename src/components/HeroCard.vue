@@ -76,6 +76,8 @@ export default class HeroCard extends Vue {}
   }
 
   &__content {
+    position: relative;
+    top: -10px;
     margin-right: 4rem;
     display: flex;
     flex-direction: column;
@@ -87,7 +89,7 @@ export default class HeroCard extends Vue {}
       width: 30vw;
       height: auto;
       max-width: 800px;
-      min-width: 300px;
+      min-width: 200px;
     }
 
     .hero-card__text {
@@ -125,8 +127,35 @@ export default class HeroCard extends Vue {}
       width: 20vw;
       height: auto;
       max-width: 400px;
-      min-width: 180px;
+      min-width: 150px;
     }
   }
 }
+
+
+/* phone */
+@media @xs {
+  .hero-card {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+
+    &__image {
+      img {
+        // height: 20vh;
+        @media (max-height: 780px) {
+          min-width: 125px;
+        }
+      }
+    }
+
+    &__content {
+      margin: 2rem 0 0;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
 </style>
