@@ -1,155 +1,61 @@
 @import "styles.less";
-@import "utils.less";
 @import "normalize.less";
 
 // Setup initial conditions
 html {
-  color: @dark-grey;
+  color: @grey;
   font-size: 10px; // set up rem
 }
 
 p {
   font-size: 1.6rem;
+  margin: 0;
 }
 * {
-  font-family: @font-ubuntu;
+  font-family: @font;
   box-sizing: border-box;
 }
 
 @fade-level: 80%;
 body {
   margin: 0;
-  background-color: @grey;
-  background: linear-gradient(-45deg, fadeout(@blue-secondary, @fade-level), fadeout(#6c7ae0, @fade-level), fadeout(#23a6d5, @fade-level), fadeout(#23d5ab, @fade-level));
-  background-size: 4000% 400%;
-  animation: Gradient 15s ease infinite;
+  background-color: @blue;
+  background: @bg-gradient;
+  width: 100vw;
+  height: 100vh;
+  // background-size: 400% 100%;
+  // animation: Gradient 15s ease infinite;
 }
-
-
 
 a, button {
   cursor: pointer;
 }
 
-// flex utils 
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.flex-column {
-  flex-direction: column;
-}
 
 // title
 .title {
+  color: @white;
   font-size: 5rem;
-  color: @dark-grey;
-  border-bottom: 1rem solid @dark-blue;
   line-height: 0.9;
 }
-.title--blue {
-  border-color: @cold-blue;
-}
-.title--orange {
-  border-color: @cool-orange;
-}
-.title--red {
-  border-color: @lava-red;
-}
-.title--white {
-  border-color: white;
-  color: white;
-}
-.text--sm {
-  font-size: 1.2rem;
+.text {
+  font-size: 2rem;
 }
 
-// cards
-.card {
-  border-radius: 5px;
-  border: 1px solid @dark-grey;
-  padding: 2rem;
-  color: @grey-darker;
-
-  &__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2rem;
-
-    .card__title {
-      font-size: 1.8rem;
-      margin: 0.5rem;
-    }
-    .card__description {
-      text-align: center;
-      width: 80%;
-      margin: 0.5rem;
-    }
-  }
-
-  &__body {
-    display: flex;
-    flex-wrap: wrap;
-  }
+// text colors
+.red {
+  color: @red;
 }
-.card--shadow {
-  box-shadow: @dark-shadow;
+.blue {
+  color: @blue;
+}
+.green {
+  color: @green;
+}
+.orange {
+  color: @orange;
 }
 
-// color utils
-.is-primary {
-  color: @cold-blue;
-}
-.is-red {
-  color: @lava-red;
-}
-.is-orange {
-  color: @cool-orange;
-}
-.is-green {
-  color: @sweet-green;
-}
-.is-light {
-  color: @background-light;
-}
-.is-dark-blue {
-  color: @dark-blue;
-}
-.is-dark {
-  color: darken(@dark-grey, 10%);
-}
-.is-white {
-  color: white;
-}
-
-// -----
-// backgrounds
-.bg-blue {
-  background-color: @cold-blue;
-}
-.bg-red {
-  background-color: @lava-red;
-}
-.bg-orange {
-  background-color: @cool-orange;
-}
-.bg-green {
-  background-color: @sweet-green;
-}
-.bg-dark-blue {
-  background-color: @dark-blue;
-}
-.bg-dark-grey {
-  background-color: @dark-grey;
-}
-.bg-white {
-  background-color: white;
-}
-
-// -----
 // buttons
 .btn {
   font-size: 2rem;
@@ -157,34 +63,29 @@ a, button {
   border: none;
   border-radius: 4px;
 }
-.btn--wide {
-  width: 18rem;
-  height: 5rem;
-}
-.btn--red {
-  color: white;
-  background-color: @lava-red;
-  background-image: @red-gradient;
-  box-shadow: @red-shadow;
-}
 .btn--blue {
   color: white;
-  background-color: @cold-blue;
-  background-image: @blue-gradient;
-  box-shadow: @blue-shadow;
+  background-color: @blue;
+  background-image: linear-gradient(to right, @blue, lighten(@blue, 20%));
+  box-shadow: 0px 0px 30px @blue;
 }
-
-// ---
-.pill {
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+.btn--grey {
+  color: white;
+  background-color: @dark-grey;
+  background-image: linear-gradient(to right, @dark-grey, lighten(@dark-grey, 20%));
+  box-shadow: 0px 0px 30px @dark-grey;
 }
-
+.btn--green {
+  color: white;
+  background-color: @green;
+  background-image: linear-gradient(to right, @green, lighten(@green, 20%));
+  box-shadow: 0px 0px 30px @green;
+}
 
 
 // hide
 .hide-xs {
-  @media (max-width: 400px) {
+  @media @xs {
     display: none;
   }
 }
